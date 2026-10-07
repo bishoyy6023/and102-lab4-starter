@@ -23,7 +23,6 @@ data class Campground(
     @SerialName("images")
     val images: List<CampgroundImage>?
 ) : java.io.Serializable {
-    // Convenience property to easily get the first image URL if it exists
     val imageUrl: String
         get() = images?.firstOrNull { !it.url.isNullOrEmpty() }?.url ?: ""
 }
