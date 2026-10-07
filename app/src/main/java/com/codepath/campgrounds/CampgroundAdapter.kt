@@ -50,10 +50,8 @@ class CampgroundAdapter(private val context: Context, private val campgrounds: L
         }
 
         override fun onClick(v: View?) {
-            // Get selected campground
             val campground = campgrounds[absoluteAdapterPosition]
 
-            // Navigate to Details screen and pass selected campground
             val intent = Intent(context, DetailActivity::class.java)
             intent.putExtra(CAMPGROUND_EXTRA, campground)
             context.startActivity(intent)
